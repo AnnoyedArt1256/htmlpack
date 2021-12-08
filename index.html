@@ -1,0 +1,70 @@
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<style>body { background-color: #17181a; color: #eeeeee;}
+.tab {
+ border-radius: 15px;
+ overflow: hidden;
+ background-color: #36393f;
+}
+
+#input {
+    background-color : #34373d;
+    color: #eeeeee;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+button {
+    background-color : #37393f;
+    color: #eeeeee;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+
+}
+
+a {
+  color: #5f86b7;
+  text-shadow: 0px 0px;
+}
+
+#output {
+text-align: center
+}
+
+#app {
+background-color: #202123;
+}
+</style>
+
+	<main class="min-h-screen flex items-center justify-center py-12 px-4  sm:px- lg:px-8">
+		<div id="app" class="max-w-full md:max-w-lg w-full p-10 rounded shadow-xl">	
+		<p class="mt-6 text-center text-2xl leading-8 font-semibold text-200">Base 64 HTML Packer</p>
+		<br>
+			<textarea type="text" v-model="input" id="input" class="rounded shadow-sm" placeholder="Paste your HTML file here"></textarea>
+			<br>
+				<p id="output">{{output}}</p>
+				<script src="https://unpkg.com/vue@next"></script>
+                                <div class="relative h-4 w-4">
+                                        <div class="absolute bottom-0 left-0 "><a href="https://www.example.com/">[source]</a></div>
+                                <div>
+				<script>
+  cod = {
+  data() {
+    return {
+      input: '',
+      output: 'example.com/'
+    }
+  },
+  watch: {
+     input() {
+       a = this.input
+       this.output = `example.com/${a}`
+     }
+  }
+}
+
+Vue.createApp(cod).mount('#app')
+  </script>
+			</div>
+
