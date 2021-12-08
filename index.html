@@ -53,13 +53,13 @@ background-color: #202123;
   data() {
     return {
       input: '',
-      output: 'https://github.com/AnnoyedArt1256/htmlpack/p#'
+      output: 'https://github.com/AnnoyedArt1256/htmlpack/p.html#'
     }
   },
   watch: {
      input() {
        a = this.input
-       this.output = `https://github.com/AnnoyedArt1256/htmlpack/p#${a}`
+       this.output = `https://github.com/AnnoyedArt1256/htmlpack/p.html#${btoa(a)}`
      }
   }
 }
